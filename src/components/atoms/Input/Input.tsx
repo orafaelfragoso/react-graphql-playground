@@ -1,5 +1,3 @@
-import React from 'react'
+import { Input as InputField } from '@chakra-ui/react'
 
-import { Props, InputField } from './styles'
-
-export const Input: React.FC<Props> = (props) => <InputField {...props} />
+export const Input = InputField

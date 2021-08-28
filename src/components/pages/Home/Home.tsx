@@ -1,7 +1,6 @@
 import React from 'react'
 
-export const Home: React.FC = () => (
-  <div>
-    <h1>Home</h1>
-  </div>
-)
+import { Home as HomeTemplate } from '@templates/Home'
+import { Hero } from '@organisms/Hero'
+
+export const Home: React.FC = () => <HomeTemplate content={<Hero />} />

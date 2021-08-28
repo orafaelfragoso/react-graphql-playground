@@ -1,20 +1,6 @@
 import React from 'react'
+import { Button as BaseButton, ButtonProps } from '@chakra-ui/react'
 
-import { StyledButton } from './styles'
-
-export type Props = {
-  variant?: string
-  type: 'button' | 'reset' | 'submit'
-  children: React.ReactElement | string
-  disabled: boolean
-}
-
-export const Button: React.FC<Props> = ({
-  type,
-  children,
-  disabled,
-}: Props) => (
-  <StyledButton type={type || 'button'} disabled={disabled}>
-    {children}
-  </StyledButton>
+export const Button: React.FC<ButtonProps> = (props: ButtonProps) => (
+  <BaseButton {...props} />
 )

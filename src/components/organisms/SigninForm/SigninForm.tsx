@@ -8,6 +8,7 @@ import {
   Checkbox,
   useColorModeValue,
   FormErrorMessage,
+  Link,
 } from '@chakra-ui/react'
 
 import { Button } from '@atoms/Button'
@@ -22,16 +23,16 @@ export type Props = {
 export type Inputs = {
   email: string
   password: string
-  acceptTerms: boolean
+  rememberMe: boolean
 }
 
 const schema = yup.object().shape({
   email: yup.string().email().required(),
   password: yup.string().required(),
-  acceptTerms: yup.boolean().isTrue(),
+  rememberMe: yup.boolean().default(false),
 })
 
-export const SignupForm: React.FC<Props> = ({ onSubmit }: Props) => {
+export const SigninForm: React.FC<Props> = ({ onSubmit }: Props) => {
   const {
     register,
     handleSubmit,
@@ -74,14 +75,17 @@ export const SignupForm: React.FC<Props> = ({ onSubmit }: Props) => {
               align='start'
               justify='space-between'
             >
-              <Field isInvalid={!!errors?.acceptTerms}>
+              <Field isInvalid={!!errors?.rememberMe} width='auto'>
                 <Checkbox
-                  isInvalid={!!errors?.acceptTerms}
-                  {...register('acceptTerms')}
+                  isInvalid={!!errors?.rememberMe}
+                  {...register('rememberMe')}
                 >
-                  Concordo com os termos de serviço
+                  Lembrar-me
                 </Checkbox>
               </Field>
+              <Link href='/forgot-password' color='blue.400'>
+                Esqueceu a senha?
+              </Link>
             </Stack>
             <Button
               bg='blue.400'

@@ -8,6 +8,8 @@ module.exports = {
       '@organisms': path.resolve(__dirname, './src/components/organisms'),
       '@templates': path.resolve(__dirname, './src/components/templates'),
       '@pages': path.resolve(__dirname, './src/components/pages'),
+      '@config': path.resolve(__dirname, './src/config'),
+      '@utils': path.resolve(__dirname, './src/utils'),
     },
   },
 }

@@ -33,7 +33,8 @@
     "no-console": 0,
     "@typescript-eslint/no-shadow": "warn",
     "react/destructuring-assignment": "warn",
-    "no-plusplus": 0
+    "no-plusplus": 0,
+    "react/button-has-type": 0
   },
   "settings": {
     "react": {

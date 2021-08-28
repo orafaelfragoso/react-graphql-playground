@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { InputField } from './styles'
+import { Props, InputField } from './styles'
 
-export const Input: React.FC = () => {
-  return <InputField />
-}
+export const Input: React.FC<Props> = (props) => <InputField {...props} />

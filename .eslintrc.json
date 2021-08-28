@@ -40,7 +40,17 @@
       "version": "detect"
     },
     "import/resolver": {
-      "typescript": {}
+      "typescript": {},
+      "alias": {
+        "map": [
+          ["@atoms", "./src/components/atoms"],
+          ["@molecules", "./src/components/molecules"],
+          ["@organisms", "./src/components/organisms"],
+          ["@templates", "./src/components/templates"],
+          ["@pages", "./src/components/pages"]
+        ],
+        "extensions": [".ts", ".tsx", ".js", ".jsx", ".json"]
+      }
     }
   }
 }

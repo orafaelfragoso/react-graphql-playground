@@ -1,10 +1,10 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
-import { Home } from './components/pages/Home'
-import { Signin } from './components/pages/Signin'
-import { Signup } from './components/pages/Signup'
-import { Dashboard } from './components/pages/Dashboard'
+import { Home } from '@pages/Home'
+import { Signin } from '@pages/Signin'
+import { Signup } from '@pages/Signup'
+import { Dashboard } from '@pages/Dashboard'
 
 const App: React.FC = () => (
   <Router>

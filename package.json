@@ -19,6 +19,7 @@
     "@types/react-router-dom": "^5.1.8",
     "@types/styled-components": "^5.1.13",
     "framer-motion": "^4",
+    "module-alias": "^2.2.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.14.0",
@@ -56,6 +57,26 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "_moduleAliases": {
+    "@atoms": "./src/components/atoms",
+    "@molecules": "./src/components/molecules",
+    "@organisms": "./src/components/organisms",
+    "@templates": "./src/components/templates",
+    "@pages": "./src/components/pages",
+    "@config": "./src/config",
+    "@utils": "./src/utils"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "@atoms/(.*)": "<rootDir>/src/components/atoms/$1",
+      "@molecules/(.*)": "<rootDir>/src/components/molecules/$1",
+      "@organisms/(.*)": "<rootDir>/src/components/organisms/$1",
+      "@templates/(.*)": "<rootDir>/src/components/templates/$1",
+      "@pages/(.*)": "<rootDir>/src/components/pages/$1",
+      "@config/(.*)": "<rootDir>/src/config/$1",
+      "@utils/(.*)": "<rootDir>/src/utils/$1"
+    }
   },
   "devDependencies": {
     "eslint": "^7.32.0",

@@ -1,7 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
-import * as yup from 'yup'
 import {
   Box,
   Stack,
@@ -13,6 +12,7 @@ import {
 import { Button } from '@atoms/Button'
 import { Input } from '@atoms/Input'
 import { Field } from '@molecules/Field'
+import { schema } from '@utils/validators/signup'
 import { Form } from './styles'
 
 export type Props = {
@@ -24,12 +24,6 @@ export type Inputs = {
   password: string
   acceptTerms: boolean
 }
-
-const schema = yup.object().shape({
-  email: yup.string().email().required(),
-  password: yup.string().required(),
-  acceptTerms: yup.boolean().isTrue(),
-})
 
 export const SignupForm: React.FC<Props> = ({ onSubmit }: Props) => {
   const {
